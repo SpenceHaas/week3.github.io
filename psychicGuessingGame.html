@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Psychic Guessing Game</title>
+
+	<script type="text/javascript">
+
+
+		var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+		var computerSelection = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+		
+		function checkLetter(compareLetters)	{
+			if (computerSelection == letterGuessed)	{
+				alert("You are psychic!");
+			}	else {
+				alert("Try again");
+			}
+		}
+
+	</script>
+</head>
+<body>
+		<h1>Are you psychic?</h1>
+		<br/>
+		<h2>Can you guess the letter I am thinking of?</h2>
+
+		<form method="POST" name="letterForm" onSubmit="checkLetter(computerSelection)">
+			<input type="text" name="letterGuessed" id="letterGuessed" />
+			<input type="Submit" name="Submit" />
+		</form>
+</body>
+</html>
